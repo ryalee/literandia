@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+.title {
+  font-family: var(--font-merriweather)
+}
+
+body {
+  font-family: var(--font-nunito)
+}
+
+.results {
+  max-height: 300px;
+  overflow: auto;
+  margin-top: 16px;
+}
+
+.result-card {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.result-card:hover {
+  background-color: #f3f3f3;
+}
