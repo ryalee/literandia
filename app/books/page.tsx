@@ -6,6 +6,7 @@ import ButtonAdd from "@/components/ButtonAdd";
 import Image from "next/image";
 import EmptyBookshelf from "@/components/EmptyBookshelf";
 import BooksGrid from "@/components/BooksGrid";
+import InputSearch from "@/components/InputSearch";
 
 const filters = [
   {
@@ -74,20 +75,7 @@ export default function BooksPage() {
       {/* area de busca */}
       <div className="bg-[#fafafa] flex flex-col md:flex-row p-6 w-[90%] gap-3 self-center rounded-2xl shadow-[0px_0px_4px_0px_#00000025]">
         {/* input */}
-        <div className="bg-[#fafafa] md:w-[60%] flex py-3 px-4 shadow-[0px_0px_4px_0px_#00000025] rounded-xl gap-2">
-          <Image
-            src={"/search.webp"}
-            width={25}
-            height={25}
-            alt="buscar livros"
-          />
-
-          <input
-            type="text"
-            className="focus:outline-none text-[#a0a0a0]"
-            placeholder="Buscar livros..."
-          />
-        </div>
+        <InputSearch/>
 
         {/* filtros */}
         <div className="flex justify-around gap-1 w-[40%]">

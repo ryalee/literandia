@@ -34,7 +34,7 @@ const navItems = [
     id: 4,
     iconBlack: "/users.webp",
     iconWhite: "/users-white.webp",
-    title: "Comunidade",
+    title: "Clube do Livro",
     route: "/social",
     alt: "Ícone tela de comunidade",
   },

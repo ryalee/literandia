@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import ButtonAdd from "./ButtonAdd";
 import { Star } from "lucide-react";
+import InputBookSearch from "./InputSearch";
 
 export default function AddBookModal({ onClose, onAddBook }) {
   const [search, setSearch] = useState("");
@@ -71,14 +72,13 @@ export default function AddBookModal({ onClose, onAddBook }) {
       <div className="modal">
         <h2>Adicione seu Livro</h2>
 
-        <div className="search-area">
-          <input
-            placeholder="Buscar livro..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+        <div className="search-area flex gap-2">
+          <InputBookSearch value={search} onChange={setSearch} />
 
-          <button className="" onClick={searchBooks}>
+          <button
+            className=" bg-black text-white rounded-lg px-2"
+            onClick={searchBooks}
+          >
             Buscar
           </button>
         </div>
@@ -115,8 +115,11 @@ export default function AddBookModal({ onClose, onAddBook }) {
         })}
       </div>
 
-      <button className="" onClick={onClose}>
-        Fechar
+      <button
+        className="bg-red-50 p-2 text-red-600 rounded-lg border"
+        onClick={onClose}
+      >
+        Cancelar
       </button>
 
       {selectedBook && (
