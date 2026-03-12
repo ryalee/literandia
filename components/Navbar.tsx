@@ -57,7 +57,7 @@ export default function Navbar() {
       </button>
 
       <div className="flex items-center">
-        <Image src={"/images/logo.webp"} width={60} height={60} alt="Logo" />
+        <Image src={"/logo.webp"} width={60} height={60} alt="Logo" />
         <p className="title text-2xl">Literandia</p>
       </div>
 
